@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+            </div>
+            <form class="card-form" method="post" action="/">
+                <div class="input">
+                    <input type="text" name="square" class="input-field"
+                    placeholder="CTорона квадрата (MM)" onkeypress="handler()" required
+                    />
+                </div>
+                <div class="input">
+                    <input type="text" name="cold" class="input-field"
+                    placeholder="Teмпература жолодной стенки (K)" onkeypress="handler()" required
+                    />
+                </div>
+                <div class="input">
+                    <input type="text" name="hot" class="input-field"
+                    placeholder="Teмпература горячей стенки (K)" onkeypress="handler()" required
+                    />
+                </div>
+                <div class="action">
+                    <input type="submit" class="action-button" id="btn" value="Pacчeт"></button> 
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function handler(){
+            if (event.keyCode < 48 || event.keyCode > 75)
+            event.returnValue = false;
+        }
+    </script>
+</body>
+</html>
+
