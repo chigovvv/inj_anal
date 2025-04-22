@@ -1,5 +1,10 @@
-/buoyantCavity/[0-9]*
+/buoyantCavity/[1-9]*
 /buoyantCavity/validation
 /buoyantCavity/postProcessing
 *log*
 /venv
+/node_modules
+package-lock.json
+/blockedChannel/[1-9]*
+/blockedChannel/validation
+/blockedChannel/postProcessing
