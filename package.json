@@ -1,7 +1,6 @@
 {
   "name": "cavitation",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js"
@@ -15,5 +14,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chigovvv/inj_anal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chigovvv/inj_anal/issues"
+  },
+  "homepage": "https://github.com/chigovvv/inj_anal#readme",
+  "description": ""
 }
