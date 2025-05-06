@@ -15,7 +15,7 @@ let runned = '';
 
 
 function cleanSh() {
-    const script1 = exec('sh /home/abdurakhmanov/OpenFOAM/abdurakhmanov-11/run/buoyantCavity/Clean.sh',
+    const script1 = exec('sh buoyantCavity/Clean.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
@@ -37,7 +37,7 @@ function cleanSh() {
 
 function changeParams(){
     const middle = Math.round((+hot + +cold)/2)
-    const script = exec(`cd /home/abdurakhmanov/OpenFOAM/abdurakhmanov-11/run/buoyantCavity/;
+    const script = exec(`cd buoyantCavity/;
                         sed -1 "19s/hot .*/hot ${hot};/;20s/cold.*/cold ${cold}; /;22s/internalField 
                         uniform.*/internalField uniform ${middle};/" 0/T;
                         sed -1 "17s/b.*/b ${square};/" system/blockMeshDict; 
@@ -60,7 +60,7 @@ function changeParams(){
 }
 
 function runSh() {
-    const script2 = exec(`cd /home/abdurakhmanov/OpenFOAM/abdurakhmanov-11/run/buoyantCavity/; blockMesh;
+    const script2 = exec(`cd buoyantCavity/; blockMesh;
                         foamRun >log; paraFoam;`, {maxBuffer: 1024 * 2000},
         (error, stdout, stderr) => {
             console.log(stdout);
